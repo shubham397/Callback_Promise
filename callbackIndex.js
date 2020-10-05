@@ -3,7 +3,7 @@ const express = require("express");
 const http = require('https');
 
 var app = express();
-
+//get API
 app.get('/:continent', (req, res) => {
     const continent = req.params.continent;
     http.get('https://restcountries.eu/rest/v2/region/'+continent, function(response) {
